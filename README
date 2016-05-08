@@ -1,0 +1,106 @@
+SpillJuice
+========
+
+SpillJuice is a set of scripts that use SExtractor and DS9 to
+cross-match proper fits files.
+
+Make Juice from sExtract(or) and watch it Spill through DS9.
+
+To use type:
+	python spilljuice.py
+
+SpillJuice will:
+ look for fits files within a list (images.lis);
+ create catalogs using SExtractor of those in the list;
+ will cross-match, using SAO DS9, the SExtractor catalog output 
+ 	with cds II/336 APASS catalog; and
+ create a crossed-matched catalog in a seperate Juiced directory.
+
+Juice creates directories within your fits file directory called:
+	juice/juice_cats
+	juice/juice_sex
+
+Spill creates a directory within the juice directory called:
+	matched_cats
+
+
+Features
+--------
+
+- Makes cross-matching catalogs simpler 
+- python scripted and can edit for changing search parameters
+
+Installation
+------------
+Requirements:
+	python
+	ds9
+	SExtractor
+		needs default.nnw, default.sex, default.param
+	
+Install SpillJuice by dropping the three python scripts:
+	juice.py
+	spill.py
+	spilljuice.py
+
+ into the fits file directory.
+
+Create a list file containing all of the fits file names.
+Example:
+	vim images.lis
+
+		foobar_stack1.fits
+		foobar_stack2.fits
+		....
+		foobar.fits
+
+
+
+Contribute
+----------
+
+- Issue Tracker: [Pending]
+- Source Code: [Pending]
+
+Support
+-------
+
+If you are having issues, please let us know.
+We have a mailing list located at: [Pending]
+
+Credits
+-------
+
+
+
+License
+-------
+
+MIT License
+
+Copyright (c) 2016 Moises Castillo
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+Resources
+---------
+
+* Online documentation: http://docs.writethedocs.org/
+* ds9 Command Line Options: http://ds9.si.edu/doc/ref/command.html
+* SExctractor: http://www.astromatic.net/software/sextractor
